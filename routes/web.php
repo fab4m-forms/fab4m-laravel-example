@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DiaryController;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\FormSubmissionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +33,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('diaries', DiaryController::class);
+Route::resource('forms', FormController::class);
+Route::resource('forms.submissions', FormSubmissionController::class);
+
 Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

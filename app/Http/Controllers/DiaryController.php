@@ -6,7 +6,6 @@ use App\Models\Diary;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Opis\JsonSchema\Validator;
-use Opis\JsonSchema\ValidationResult;
 use Opis\JsonSchema\Errors\ErrorFormatter;
 use Illuminate\Support\Facades\Redirect;
 
